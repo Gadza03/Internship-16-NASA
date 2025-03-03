@@ -4,10 +4,10 @@ import { paths } from "./paths";
 import {
   ApodPage,
   EarthImagery,
-  HomePage,
   MarsRoverPage,
   NearEarthPage,
   Page404,
+  HomePage,
 } from "./pages";
 
 export default function Router() {
