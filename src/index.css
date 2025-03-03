@@ -1,0 +1,19 @@
+@import "./styles/definitions/fonts.css";
+@import "./styles/definitions/colors.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--white);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}

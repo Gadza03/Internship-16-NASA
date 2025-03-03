@@ -1,0 +1,26 @@
+.navBar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 70px;
+  padding: 10px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.linksWrapper {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.linksWrapper li {
+  cursor: pointer;
+}
+
+.logo {
+  cursor: pointer;
+}
