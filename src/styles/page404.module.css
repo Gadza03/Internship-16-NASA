@@ -1,0 +1,17 @@
+.pageWrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.feedbackWrapper {
+  align-self: center;
+}
+
+.goHomeBtn {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid var(--green);
+  margin-bottom: 1rem;
+}

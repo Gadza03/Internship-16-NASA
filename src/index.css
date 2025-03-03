@@ -17,3 +17,20 @@ body {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+.header {
+  padding-top: 100px;
+}
+
+button {
+  cursor: pointer;
+  color: var(--white);
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat";
+  line-height: 1.2;
+}

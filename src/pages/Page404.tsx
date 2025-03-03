@@ -1,7 +1,22 @@
+import { useNavigate } from "react-router";
+import pageNotFoundSvg from "../assets/svgs/404error.svg";
+import c from "../styles/page404.module.css";
+import { paths } from "../paths";
 export function Page404() {
+  const navigate = useNavigate();
+
   return (
-    <>
-      <p>404</p>
-    </>
+    <div className={`header container ${c.pageWrapper}`}>
+      <div className={c.feedbackWrapper}>
+        <button className={c.goHomeBtn} onClick={() => navigate(paths.home)}>
+          Go to home page
+        </button>
+        <h1>
+          Page not found. <br /> Error 404
+        </h1>
+      </div>
+
+      <img src={pageNotFoundSvg} alt="Page not found illustration" />
+    </div>
   );
 }
