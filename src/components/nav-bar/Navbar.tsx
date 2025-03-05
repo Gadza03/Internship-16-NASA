@@ -1,10 +1,10 @@
-import c from "../styles/navbar.module.css";
-import nasaIcon from "../assets/svgs/nasa-icon.svg";
+import c from "../../styles/navbar.module.css";
+import nasaIcon from "../../assets/svgs/nasa-icon.svg";
 import { useNavigate } from "react-router";
-import { paths } from "../paths";
 import ReactSwitch from "react-switch";
 import { useContext } from "react";
-import { ThemeContext } from "../contexts";
+import { ThemeContext } from "../../contexts";
+import { paths } from "../../paths";
 
 const navLinks = [
   { name: "Home", path: paths.home },

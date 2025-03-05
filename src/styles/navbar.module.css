@@ -9,6 +9,7 @@
   align-items: center;
   background-color: var(--black);
   color: var(--white);
+  z-index: 50;
 }
 
 .linksWrapper {
