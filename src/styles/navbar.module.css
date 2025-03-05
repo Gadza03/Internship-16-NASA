@@ -24,3 +24,7 @@
 .logo {
   cursor: pointer;
 }
+
+:global(#light) {
+  background-color: var(--background-color-white);
+}

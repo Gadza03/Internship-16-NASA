@@ -9,8 +9,12 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: var(--background-color);
+  background-color: var(--background-color-dark);
   color: var(--white);
+}
+
+#light {
+  color: var(--black);
 }
 
 .container {
@@ -26,6 +30,10 @@ button {
   cursor: pointer;
   color: var(--white);
   font-size: inherit;
+}
+
+#light button {
+  color: var(--black);
 }
 
 h1,

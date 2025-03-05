@@ -1,11 +1,17 @@
 import { BrowserRouter } from "react-router";
 import Router from "./Router";
+import { ThemeProvider } from "./contexts";
+import { LoaderProvider } from "./contexts";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
+    <ThemeProvider>
+      <LoaderProvider>
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+      </LoaderProvider>
+    </ThemeProvider>
   );
 }
 

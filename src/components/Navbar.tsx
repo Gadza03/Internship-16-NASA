@@ -2,6 +2,9 @@ import c from "../styles/navbar.module.css";
 import nasaIcon from "../assets/svgs/nasa-icon.svg";
 import { useNavigate } from "react-router";
 import { paths } from "../paths";
+import ReactSwitch from "react-switch";
+import { useContext } from "react";
+import { ThemeContext } from "../contexts";
 
 const navLinks = [
   { name: "Home", path: paths.home },
@@ -13,6 +16,7 @@ const navLinks = [
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const { isLight, toggleTheme } = useContext(ThemeContext);
 
   return (
     <nav className={c.navBar}>
@@ -20,6 +24,7 @@ export default function Navbar() {
         <img src={nasaIcon} alt="Nasa logo" />
       </div>
       <ul className={c.linksWrapper}>
+        <ReactSwitch onChange={toggleTheme} checked={isLight} />
         {navLinks.map(({ name, path }) => (
           <li key={name} onClick={() => navigate(path)}>
             {name}
