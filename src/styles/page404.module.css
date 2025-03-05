@@ -19,3 +19,9 @@
 #dark {
   background-color: red;
 }
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    display: block;
+  }
+}
