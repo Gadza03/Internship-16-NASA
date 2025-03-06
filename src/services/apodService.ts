@@ -1,11 +1,26 @@
 import axios from "axios";
+import { ApodType } from "../types/apodType";
 
-export const API_KEY = import.meta.env.VITE_API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = "https://api.nasa.gov/planetary/apod";
 
-const params = {
-  api_key: API_KEY,
-  start_date: Date,
-  end_date: Date,
+export const fetchApod = async (startDate: string, endDate: string) => {
+  try {
+    const response = await axios.get(BASE_URL, {
+      params: {
+        api_key: API_KEY,
+        start_date: startDate,
+        end_date: endDate,
+      },
+    });
+    const data = await response.data;
+    return data.map((item: ApodType) => ({
+      date: item.date,
+      explanation: item.explanation,
+      url: item.url,
+      title: item.title,
+    }));
+  } catch (error) {
+    throw new Error("Failed to fetch APOD data");
+  }
 };
-const fetchData = async () => {};

@@ -1,4 +1,4 @@
-export type Apod = {
+export type ApodType = {
   date: Date;
   explanation: string;
   url: string;

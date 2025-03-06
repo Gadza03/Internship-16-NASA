@@ -1,16 +1,16 @@
 import { BrowserRouter } from "react-router";
 import Router from "./Router";
 import { ThemeProvider } from "./contexts";
-import { LoaderProvider } from "./contexts";
-
+import { ErrorBoundary } from "react-error-boundary";
+import { ErrorFallback } from "./error";
 function App() {
   return (
     <ThemeProvider>
-      <LoaderProvider>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
         <BrowserRouter>
           <Router />
         </BrowserRouter>
-      </LoaderProvider>
+      </ErrorBoundary>
     </ThemeProvider>
   );
 }
