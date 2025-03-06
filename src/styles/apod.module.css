@@ -46,6 +46,7 @@
   object-fit: cover;
   width: 100%;
   height: 300px;
+  border-radius: 8px;
 }
 
 .dateFiltersWrapper {
@@ -66,6 +67,12 @@
   padding: 7px;
   border-radius: 5px;
 }
+
+.infiniteLoader {
+  margin-block: 2rem;
+  font-size: 1.5rem;
+}
+
 @media (max-width: 768px) {
   .apodsWrapper {
     grid-template-columns: 1fr;
