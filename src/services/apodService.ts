@@ -14,12 +14,14 @@ export const fetchApod = async (startDate: string, endDate: string) => {
       },
     });
     const data = await response.data;
-    return data.map((item: ApodType) => ({
-      date: item.date,
-      explanation: item.explanation,
-      url: item.url,
-      title: item.title,
-    }));
+    return data
+      .map((item: ApodType) => ({
+        date: item.date,
+        explanation: item.explanation,
+        url: item.url,
+        title: item.title,
+      }))
+      .reverse();
   } catch (error) {
     throw new Error("Failed to fetch APOD data");
   }

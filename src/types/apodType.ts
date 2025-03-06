@@ -1,5 +1,5 @@
 export type ApodType = {
-  date: Date;
+  date: string;
   explanation: string;
   url: string;
   title: string;

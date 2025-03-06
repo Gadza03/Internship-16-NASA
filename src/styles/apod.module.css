@@ -1,0 +1,73 @@
+.apodHeading {
+  font-size: 4rem;
+  margin-block: 60px;
+}
+
+.apodsWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.apodCard {
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 0.1fr 0.9fr;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.apodCard:hover {
+  transform: translateY(-5px);
+}
+
+:global(#light) .apodCard {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.apodInfo h2 {
+  margin-bottom: 1rem;
+}
+
+.apodInfo p {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: var(--ligth-grey);
+}
+
+.apodImage {
+  width: 100%;
+  height: 100%;
+}
+
+.apodImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.dateFiltersWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 30px;
+}
+
+.dateFiltersWrapper button {
+  background-color: transparent;
+  border: 1px solid var(--green);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dateFiltersWrapper input {
+  padding: 7px;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .apodsWrapper {
+    grid-template-columns: 1fr;
+  }
+}
