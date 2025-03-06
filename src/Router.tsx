@@ -8,6 +8,7 @@ import {
   NearEarthPage,
   Page404,
   HomePage,
+  ApodSinglePage,
 } from "./pages";
 
 export default function Router() {
@@ -23,6 +24,10 @@ export default function Router() {
         {
           path: paths.apod,
           element: <ApodPage />,
+        },
+        {
+          path: "astronomy-picture-of-the-day/:date",
+          element: <ApodSinglePage />,
         },
         {
           path: paths.marsRover,

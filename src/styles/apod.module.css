@@ -73,8 +73,54 @@
   font-size: 1.5rem;
 }
 
+.singleInfoWrapper {
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 2rem;
+}
+
+.singleInfoWrapper p {
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+.singleApodInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.singleInfoWrapper img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.singleApodInfo h1 {
+  font-size: 3.5rem;
+}
+
+.singleApodInfo p {
+  min-width: 100px;
+}
+
 @media (max-width: 768px) {
   .apodsWrapper {
     grid-template-columns: 1fr;
+  }
+  .singleInfoWrapper {
+    padding-inline: 0;
+  }
+
+  .singleApodInfo h1 {
+    font-size: 2rem;
+  }
+
+  .dateFiltersWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 }
