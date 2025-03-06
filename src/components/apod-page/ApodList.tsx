@@ -103,7 +103,7 @@ export function ApodList({ data }: ApodListProps) {
           <ApodCard key={apod.date} apod={apod} />
         ))}
       </div>
-      {moreData && !initialLoad && (
+      {!isDateFilterActive && moreData && !initialLoad && (
         <div ref={loader} className={c.infiniteLoader}>
           Loading more data ...
         </div>
