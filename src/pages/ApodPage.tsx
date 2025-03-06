@@ -7,9 +7,5 @@ const { today, startDate } = getDateRange();
 const ApodWithLoad = withLoading(ApodList, () => fetchApod(startDate, today));
 
 export function ApodPage() {
-  return (
-    <section id="apod-page">
-      <ApodWithLoad />
-    </section>
-  );
+  return <ApodWithLoad />;
 }
