@@ -9,6 +9,7 @@ import {
   Page404,
   HomePage,
   ApodSinglePage,
+  MarsSinglePage,
 } from "./pages";
 
 export default function Router() {
@@ -26,12 +27,16 @@ export default function Router() {
           element: <ApodPage />,
         },
         {
-          path: "astronomy-picture-of-the-day/:date",
+          path: `${paths.apod}/:date`,
           element: <ApodSinglePage />,
         },
         {
           path: paths.marsRover,
           element: <MarsRoverPage />,
+        },
+        {
+          path: `${paths.marsRover}/:id`,
+          element: <MarsSinglePage />,
         },
         {
           path: paths.neo,

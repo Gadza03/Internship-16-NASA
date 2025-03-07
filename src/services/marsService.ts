@@ -48,3 +48,15 @@ export const fetchMarsPhotos = async (
     throw new Error("Failed to fetch Mars Rover photos");
   }
 };
+
+export const getMarsPhotoInfoById = async (id: number) => {
+  try {
+    const response = await axios.get(`${BASE_URL}`, {
+      params: id,
+    });
+
+    return response.data as MarsPhoto;
+  } catch (error) {
+    throw new Error("Failed to get Mars Rover photo by ID");
+  }
+};
