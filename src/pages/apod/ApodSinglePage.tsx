@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { fetchApod } from "../../services/apodService";
 import { ApodType } from "../../types/apodType";
 import c from "../../styles/apod.module.css";
+import GoBackButton from "../../components/GoBackButton";
 
 export function ApodSinglePage() {
   const { date } = useParams<{ date: string }>();
@@ -21,6 +22,8 @@ export function ApodSinglePage() {
 
   return (
     <div className="container header">
+      <GoBackButton />
+
       <div className={c.singleInfoWrapper}>
         <div className={c.singleApodInfo}>
           <h1>{apod?.title}</h1>

@@ -74,7 +74,7 @@
 }
 
 .singleInfoWrapper {
-  padding-inline: 2rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 30px;

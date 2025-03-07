@@ -36,14 +36,19 @@ export default function MarsFilters({
 }: MarsFilterProps) {
   const handleRoverChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setRover(e.target.value);
+    setPage(1);
   };
 
   const handleEarthDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEarthDate(e.target.value);
+    setPage(1);
   };
 
   const handleNextPage = () => {
     setPage((prevPage) => prevPage + 1);
+  };
+  const handleBackToFirstPage = () => {
+    setPage(1);
   };
 
   const handleBackPage = () => {
@@ -92,8 +97,9 @@ export default function MarsFilters({
       </label>
       <div className={c.loadData}>
         <p>More photos:</p>
-        <button onClick={handleNextPage}>Next Page</button>
-        <button onClick={handleBackPage}>Back Page</button>
+        <button onClick={handleNextPage}>Next</button>
+        <button onClick={handleBackToFirstPage}>First Page</button>
+        <button onClick={handleBackPage}>Previous</button>
       </div>
     </div>
   );

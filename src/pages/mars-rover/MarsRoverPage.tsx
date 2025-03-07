@@ -2,20 +2,15 @@ import { withLoading } from "../../hoc/WithLoading";
 import MarsGallery from "../../components/mars-rover-page/MarsGallery";
 import { fetchMarsPhotos } from "../../services/marsService";
 import { useState } from "react";
-import { formatDateToString } from "../../utils/formatDateToString";
 import MarsFilters from "../../components/mars-rover-page/MarsFilters";
 import c from "../../styles/mars.module.css";
 
-const todaysDate = new Date();
-todaysDate.setMonth(todaysDate.getMonth() - 1);
-
-const formattedDate = formatDateToString(todaysDate);
-console.log(formattedDate);
+const RADNOM_DATE = "2019-02-06";
 
 export function MarsRoverPage() {
   const [rover, setRover] = useState<string>("curiosity");
   const [page, setPage] = useState<number>(1);
-  const [earthDate, setEarthDate] = useState<string>(formattedDate);
+  const [earthDate, setEarthDate] = useState<string>(RADNOM_DATE);
   const [camera, setCamera] = useState<string>("");
 
   const MarsRoverPageWithLoad = withLoading(MarsGallery, () =>

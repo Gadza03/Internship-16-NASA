@@ -34,9 +34,22 @@
   font-size: 2em;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .icon {
   width: 350px;
   justify-self: end;
+  animation: float 3s ease-in-out infinite;
 }
 
 .icon:nth-child(odd) {

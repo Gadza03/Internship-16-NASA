@@ -80,6 +80,59 @@
   background-color: var(--green-hover);
 }
 
+/* single mars page */
+
+.singleMarsPhoto {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--black);
+  border-radius: 8px;
+  box-shadow: 0 0 30px 5px var(--nasa-blue);
+  width: 100%;
+  margin: 40px auto;
+}
+
+:global(#light) .singleMarsPhoto {
+  background-color: var(--white);
+}
+
+.imgWrapper {
+  border-radius: 8px;
+  width: 75%;
+  height: auto;
+}
+
+.imgWrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.photoDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.photoDetails h3 {
+  margin-bottom: 12px;
+  color: var(--white);
+}
+
+.photoDetails p {
+  color: #e0e0e0;
+}
+
+:global(#light) .photoDetails h3 {
+  color: var(--black);
+}
+
+:global(#light) .photoDetails p {
+  color: var(--light-grey);
+}
+
 @media (max-width: 1024px) {
   .marsGalleryWrapper {
     grid-template-columns: repeat(2, 1fr);

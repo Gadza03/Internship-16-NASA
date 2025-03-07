@@ -84,3 +84,10 @@ h3 {
 #light .no-items-found {
   border-color: var(--black);
 }
+
+.goBackBtn {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid var(--nasa-blue);
+}
