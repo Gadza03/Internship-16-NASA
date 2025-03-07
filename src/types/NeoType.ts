@@ -13,10 +13,10 @@ export type NeoType = {
     {
       close_approach_date: string;
       relative_velocity: {
-        kilometers_per_hour: number;
+        kilometers_per_hour: string;
       };
       miss_distance: {
-        kilometers: number;
+        kilometers: string;
       };
 
       orbiting_body: string;

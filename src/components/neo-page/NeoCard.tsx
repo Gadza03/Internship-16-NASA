@@ -9,6 +9,7 @@ import {
   FaCheckCircle,
 } from "react-icons/fa";
 import { useNavigate } from "react-router";
+import { paths } from "../../paths";
 
 type NeoCardProps = {
   neo: NeoType;
@@ -20,7 +21,11 @@ export default function NeoCard({ neo }: NeoCardProps) {
   const approach = neo.close_approach_data[0];
   const isHazardous = neo.is_potentially_hazardous_asteroid;
 
-  const handleNeoClick = () => {};
+  const handleNeoClick = () => {
+    navigate(paths.neoVisualisation(neo.id), {
+      state: neo,
+    });
+  };
 
   return (
     <div className={c.neoCardWrapper} onClick={handleNeoClick}>

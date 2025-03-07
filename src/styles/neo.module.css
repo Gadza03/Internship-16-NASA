@@ -43,8 +43,11 @@ span {
   color: #d1cfcf;
 }
 
-:global(#light) .neoCardWrapper p,
-span {
+:global(#light) .neoCardWrapper p {
+  color: #1d1d1d;
+}
+
+:global(#light) span {
   color: #1d1d1d;
 }
 
@@ -65,6 +68,27 @@ span {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.chartWrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  color: var(--white);
+  background-color: var(--black);
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+:global(#light) .chartWrapper {
+  color: var(--black);
+  background-color: white;
+}
+
+h2 {
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {

@@ -11,6 +11,7 @@ import {
   ApodSinglePage,
   MarsSinglePage,
 } from "./pages";
+import NeoVisualisation from "./components/neo-page/NeoVisualisation";
 
 export default function Router() {
   return useRoutes([
@@ -41,6 +42,10 @@ export default function Router() {
         {
           path: paths.neo,
           element: <NearEarthPage />,
+        },
+        {
+          path: `${paths.neo}/:id`,
+          element: <NeoVisualisation />,
         },
         {
           path: paths.earthImagery,
