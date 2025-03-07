@@ -25,6 +25,10 @@ export const fetchMarsPhotos = async (
       params,
     });
 
+    if (response.status !== 200) {
+      throw new Error("Something went wrong");
+    }
+
     const { photos } = response.data;
 
     return photos.map((item: MarsPhoto) => ({

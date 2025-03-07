@@ -80,6 +80,7 @@ span {
   background-color: var(--black);
   border-radius: 12px;
   margin-bottom: 40px;
+  transition: all 0.2s ease-in-out;
 }
 
 :global(#light) .chartWrapper {

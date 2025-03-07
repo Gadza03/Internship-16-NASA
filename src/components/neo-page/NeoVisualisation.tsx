@@ -18,8 +18,8 @@ export default function NeoVisualisation() {
   const distance = parseFloat(approach.miss_distance.kilometers);
 
   const data = [
-    { name: "Earth", distance: 0, size: 100 },
-    { name: neo.name, distance: distance, size: 200 },
+    { name: "Earth", distance: 0 },
+    { name: neo.name, distance: distance },
   ];
 
   return (
@@ -39,7 +39,7 @@ export default function NeoVisualisation() {
               dx={-5}
             />
             <Tooltip />
-            <Scatter data={data} fill="#ff5733" dataKey="size" shape="circle" />
+            <Scatter data={data} fill="red" shape="circle" />
           </ScatterChart>
         </ResponsiveContainer>
         <p>

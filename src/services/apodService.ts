@@ -14,6 +14,10 @@ export const fetchApod = async (startDate: string, endDate: string) => {
       },
     });
 
+    if (response.status !== 200) {
+      throw new Error("Something went wrong");
+    }
+
     return response.data
       .map((item: ApodType) => ({
         date: item.date,

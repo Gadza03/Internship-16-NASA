@@ -1,5 +1,6 @@
 .heading {
   font-size: 4rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .headerWrapper {
@@ -55,10 +56,12 @@
 .icon:nth-child(odd) {
   justify-self: start;
 }
+
 .pageSectionWrapper {
   display: grid;
   grid-template-columns: 60% 40%;
   align-items: center;
+  transition: all 0.2s ease-in-out;
 }
 
 .pageSectionWrapper.reverse {

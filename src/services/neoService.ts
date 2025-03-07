@@ -23,6 +23,10 @@ export const fetchNeo = async ({ start_date, end_date }: fetchNeoProps) => {
       params: params,
     });
 
+    if (response.status !== 200) {
+      throw new Error("Something went wrong");
+    }
+
     if (!response.data.near_earth_objects[start_date]) {
       return [];
     }
