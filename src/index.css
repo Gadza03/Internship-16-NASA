@@ -72,3 +72,15 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
+.no-items-found {
+  display: inline-block;
+  border-radius: 8px;
+  border: 2px solid var(--white);
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#light .no-items-found {
+  border-color: var(--black);
+}

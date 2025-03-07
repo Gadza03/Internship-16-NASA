@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
-import pageNotFoundSvg from "../assets/svgs/404error.svg";
-import c from "../styles/page404.module.css";
-import { paths } from "../paths";
+import pageNotFoundSvg from "../../assets/svgs/404error.svg";
+import c from "../../styles/page404.module.css";
+import { paths } from "../../paths";
 export function Page404() {
   const navigate = useNavigate();
 

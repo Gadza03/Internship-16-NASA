@@ -48,6 +48,14 @@ export const withLoading = <T, P extends WithLoadingProps<T>>(
 
     if (error) throw error;
 
+    if (Array.isArray(data) && data.length === 0) {
+      return (
+        <div className="no-items-found">
+          <p>No items found</p>
+        </div>
+      );
+    }
+
     return <WrappedComponent data={data as T} {...(props as P)} />;
   };
 };

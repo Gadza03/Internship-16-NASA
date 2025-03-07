@@ -1,4 +1,3 @@
-import { ApodType } from "../../types/apodType";
 import c from "../../styles/apod.module.css";
 import { ApodCard } from "./ApodCard";
 import { useErrorHandler } from "../../hooks/useErrorHandler";
@@ -7,6 +6,7 @@ import { DateFilter } from "./DateFilter";
 import { subDays } from "date-fns";
 import { formatDateToString } from "../../utils/formatDateToString";
 import { fetchApod } from "../../services/apodService";
+import { ApodType } from "../../types/apodType";
 
 type ApodListProps = {
   data: ApodType[];

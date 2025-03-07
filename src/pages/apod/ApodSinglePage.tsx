@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { fetchApod } from "../services/apodService";
-import { ApodType } from "../types/apodType";
-import c from "../styles/apod.module.css";
+import { fetchApod } from "../../services/apodService";
+import { ApodType } from "../../types/apodType";
+import c from "../../styles/apod.module.css";
 
 export function ApodSinglePage() {
   const { date } = useParams<{ date: string }>();
@@ -28,7 +28,7 @@ export function ApodSinglePage() {
         </div>
         <img src={apod?.url} alt={apod?.title} />
 
-        <h3>Explanation:</h3>
+        {apod && <h3>Explanation:</h3>}
         <p>{apod?.explanation}</p>
       </div>
     </div>

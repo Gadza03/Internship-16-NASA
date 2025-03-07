@@ -1,17 +1,17 @@
-import c from "../styles/homePage.module.css";
-import PageSection from "../components/home-page/PageSection";
+import c from "../../styles/homePage.module.css";
+import PageSection from "../../components/home-page/PageSection";
 import { useNavigate } from "react-router";
-import { paths } from "../paths";
+import { paths } from "../../paths";
 import { useContext } from "react";
-import { ThemeContext } from "../contexts";
-import earthWhite from "../assets/images/earthWhite.png";
-import earthBlack from "../assets/images/earthBlack.png";
-import jupiterWhite from "../assets/images/jupiterWhite.png";
-import jupiterBlack from "../assets/images/jupiterBlack.png";
-import marsWhite from "../assets/images/marsWhite.png";
-import marsBlack from "../assets/images/marsBlack.png";
-import astronautWhite from "../assets/images/astronautWhite.png";
-import astronautBlack from "../assets/images/astronautBlack.png";
+import { ThemeContext } from "../../contexts";
+import earthWhite from "../../assets/images/earthWhite.png";
+import earthBlack from "../../assets/images/earthBlack.png";
+import jupiterWhite from "../../assets/images/jupiterWhite.png";
+import jupiterBlack from "../../assets/images/jupiterBlack.png";
+import marsWhite from "../../assets/images/marsWhite.png";
+import marsBlack from "../../assets/images/marsBlack.png";
+import astronautWhite from "../../assets/images/astronautWhite.png";
+import astronautBlack from "../../assets/images/astronautBlack.png";
 
 export function HomePage() {
   const navigate = useNavigate();
