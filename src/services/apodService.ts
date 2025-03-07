@@ -13,8 +13,8 @@ export const fetchApod = async (startDate: string, endDate: string) => {
         end_date: endDate,
       },
     });
-    const data = await response.data;
-    return data
+
+    return response.data
       .map((item: ApodType) => ({
         date: item.date,
         explanation: item.explanation,

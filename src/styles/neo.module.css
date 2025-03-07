@@ -1,0 +1,78 @@
+.label {
+  display: flex;
+  align-items: center;
+  margin: 40px 0 15px 0;
+  gap: 10px;
+}
+
+.label input {
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.neoCardWrapper {
+  display: grid;
+  gap: 20px;
+  background-color: var(--black);
+  padding: 50px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--green);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.neoCardWrapper:hover {
+  transform: translateY(-4px);
+}
+
+.neoCardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.neoCardHeader h3 {
+  font-size: 24px;
+}
+
+:global(#light) .neoCardWrapper {
+  background-color: var(--white);
+}
+
+.neoCardWrapper p,
+span {
+  color: #d1cfcf;
+}
+
+:global(#light) .neoCardWrapper p,
+span {
+  color: #1d1d1d;
+}
+
+.icon {
+  font-size: 20px;
+  align-self: center;
+  color: var(--green);
+}
+
+.textIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section,
+.neoCardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .neoCardsWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .neoCardWrapper {
+    padding-inline: 20px;
+  }
+}
