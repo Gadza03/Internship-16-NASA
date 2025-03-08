@@ -1,4 +1,4 @@
-import { useRoutes } from "react-router";
+import { useLocation, useRoutes } from "react-router";
 import MainLayout from "./layouts/MainLayout";
 import { paths } from "./paths";
 
@@ -13,8 +13,14 @@ import {
   NearEarthPage,
   Page404,
 } from "./pages";
+import { useEffect } from "react";
 
 export default function Router() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return useRoutes([
     {
       path: "/",
