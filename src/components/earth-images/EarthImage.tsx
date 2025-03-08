@@ -5,5 +5,7 @@ type EarthImageProps = {
 };
 
 export default function EarthImage({ data }: EarthImageProps) {
-  return <img src={data.url} alt="Satelite photo" className={c.sateliteImg} />;
+  return (
+    <img src={data.url} alt="satellite photo" className={c.satelliteImg} />
+  );
 }

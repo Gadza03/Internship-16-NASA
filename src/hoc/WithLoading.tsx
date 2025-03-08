@@ -1,6 +1,6 @@
-import { ComponentType, useEffect, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
-import { useErrorHandler } from "../hooks/useErrorHandler";
+import { ComponentType } from "react";
+import useFetch from "../hooks/useFetch";
 
 type FetchData<T> = () => Promise<T>;
 
@@ -13,30 +13,7 @@ export const withLoading = <T, P extends WithLoadingProps<T>>(
   fetchData: FetchData<T>
 ) => {
   return (props: Omit<P, keyof WithLoadingProps<T>>) => {
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [data, setData] = useState<T | null>(null);
-    const { error, handleError, reset } = useErrorHandler();
-
-    useEffect(() => {
-      const fetchWithLoading = async () => {
-        try {
-          setIsLoading(true);
-          reset();
-
-          const response = await fetchData();
-
-          setData(response);
-        } catch (error) {
-          handleError(
-            error instanceof Error ? error : new Error(String(error))
-          );
-        } finally {
-          setIsLoading(false);
-        }
-      };
-
-      fetchWithLoading();
-    }, []);
+    const { data, isLoading, error } = useFetch(fetchData);
 
     if (isLoading) {
       return (
@@ -46,7 +23,7 @@ export const withLoading = <T, P extends WithLoadingProps<T>>(
       );
     }
 
-    if (error) throw error;
+    if (error) throw new Error(error);
 
     if (Array.isArray(data) && data.length === 0) {
       return (

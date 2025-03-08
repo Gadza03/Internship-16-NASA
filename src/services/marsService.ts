@@ -5,7 +5,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = "https://api.nasa.gov/mars-photos/api/v1/rovers";
 
 export const fetchMarsPhotos = async (
-  date: string,
+  date: string | null,
   page: number,
   rover: string,
   camera?: string

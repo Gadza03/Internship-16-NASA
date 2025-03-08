@@ -7,6 +7,7 @@ import EarthImage from "../../components/earth-images/EarthImage";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import c from "../../styles/earth.module.css";
 import { Toaster, toast } from "react-hot-toast";
+import { FaLocationCrosshairs } from "react-icons/fa6";
 
 const getEarthImageData = (location: LatLngExpression | null) => {
   if (location) {
@@ -62,6 +63,10 @@ export function EarthImagery() {
     <div className="container header">
       <div className={c.earthImgWrapper}>
         <h2>Earth Imagery Viewer</h2>
+        <p className={c.textIcon}>
+          <FaLocationCrosshairs className={c.icon} /> Find your favourite
+          location on map and get photo from satellite on the bottom of the page
+        </p>
         <MapComponent position={location} setPosition={setLocation} />
 
         <button
@@ -73,20 +78,24 @@ export function EarthImagery() {
         </button>
         <h3>Favourite locations:</h3>
         <ul className={c.favourites}>
-          {favorites.map((fav, index) => (
-            <li key={index} className={c.favouriteItem}>
-              <button
-                className={c.favouriteLocationBtn}
-                onClick={() => setLocation(fav)}
-              >
-                {Array.isArray(fav) ? fav.join(", ") : ""}
-              </button>
-              <IoMdCloseCircleOutline
-                className={c.removeIcon}
-                onClick={() => removeFavorite(fav)}
-              />
-            </li>
-          ))}
+          {favorites.length > 0 ? (
+            favorites.map((fav, index) => (
+              <li key={index} className={c.favouriteItem}>
+                <button
+                  className={c.favouriteLocationBtn}
+                  onClick={() => setLocation(fav)}
+                >
+                  {Array.isArray(fav) ? fav.join(", ") : ""}
+                </button>
+                <IoMdCloseCircleOutline
+                  className={c.removeIcon}
+                  onClick={() => removeFavorite(fav)}
+                />
+              </li>
+            ))
+          ) : (
+            <p className={c.noItemsText}>No items in list</p>
+          )}
         </ul>
         {location && <EarthImageWithLoading />}
       </div>

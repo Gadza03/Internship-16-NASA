@@ -3,11 +3,11 @@ import c from "../../styles/mars.module.css";
 type MarsFilterProps = {
   rover: string;
   page: number;
-  earthDate: string;
+  earthDate: string | null;
   camera: string;
   setRover: React.Dispatch<React.SetStateAction<string>>;
   setPage: React.Dispatch<React.SetStateAction<number>>;
-  setEarthDate: React.Dispatch<React.SetStateAction<string>>;
+  setEarthDate: React.Dispatch<React.SetStateAction<string | null>>;
   setCamera: React.Dispatch<React.SetStateAction<string>>;
 };
 
@@ -40,7 +40,9 @@ export default function MarsFilters({
   };
 
   const handleEarthDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEarthDate(e.target.value);
+    const newDate = e.target.value || null;
+    setEarthDate(newDate);
+
     setPage(1);
   };
 
@@ -81,7 +83,11 @@ export default function MarsFilters({
       </label>
       <label>
         Date:
-        <input type="date" value={earthDate} onChange={handleEarthDateChange} />
+        <input
+          type="date"
+          value={earthDate || ""}
+          onChange={handleEarthDateChange}
+        />
       </label>
       <label>
         Camera:

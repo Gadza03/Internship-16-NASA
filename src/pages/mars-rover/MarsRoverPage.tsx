@@ -10,7 +10,7 @@ const RADNOM_DATE = "2019-02-06";
 export function MarsRoverPage() {
   const [rover, setRover] = useState<string>("curiosity");
   const [page, setPage] = useState<number>(1);
-  const [earthDate, setEarthDate] = useState<string>(RADNOM_DATE);
+  const [earthDate, setEarthDate] = useState<string | null>(RADNOM_DATE);
   const [camera, setCamera] = useState<string>("");
 
   const MarsRoverPageWithLoad = withLoading(MarsGallery, () =>
