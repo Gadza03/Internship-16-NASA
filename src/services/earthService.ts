@@ -20,7 +20,6 @@ export const fetchEarthImages = async (lat: number, lon: number) => {
 
     return { url: response.data.url };
   } catch (error) {
-    console.error("Failed to fetch Earth images", error);
     throw new Error("Failed to fetch Earth images");
   }
 };
