@@ -1,17 +1,18 @@
 import { useRoutes } from "react-router";
 import MainLayout from "./layouts/MainLayout";
 import { paths } from "./paths";
+
+import NeoVisualisation from "./components/neo-page/NeoVisualisation";
 import {
   ApodPage,
+  ApodSinglePage,
   EarthImagery,
+  HomePage,
   MarsRoverPage,
+  MarsSinglePage,
   NearEarthPage,
   Page404,
-  HomePage,
-  ApodSinglePage,
-  MarsSinglePage,
 } from "./pages";
-import NeoVisualisation from "./components/neo-page/NeoVisualisation";
 
 export default function Router() {
   return useRoutes([
