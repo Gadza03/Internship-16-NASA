@@ -13,6 +13,17 @@
   box-shadow: 0 2px 15px #5d5aff;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburgerIcon {
+  font-size: 24px;
+}
+
 .linksWrapper {
   list-style: none;
   display: flex;
@@ -22,6 +33,7 @@
 
 .linksWrapper li {
   cursor: pointer;
+  font-weight: bold;
 }
 
 .logo {
@@ -34,4 +46,39 @@
 
 .icon {
   font-size: 50px;
+}
+
+.linksWrapper span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.linksWrapper.openMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: var(--background-color-dark);
+  padding: 2rem;
+  z-index: 999;
+  width: 300px;
+  min-height: 100vh;
+}
+
+.linksWrapper.openMenu li {
+  padding: 2px;
+  border-bottom: 2px solid var(--green);
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+  .linksWrapper {
+    display: none;
+  }
 }
