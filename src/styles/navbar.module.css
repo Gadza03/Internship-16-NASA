@@ -54,19 +54,24 @@
   gap: 10px;
 }
 
+:global(#light) .linksWrapper span {
+  color: #d1cfcf;
+}
+
 .linksWrapper.openMenu {
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 30px;
   position: absolute;
-  top: 60px;
+  top: 70px;
   right: 0;
   background-color: var(--background-color-dark);
   padding: 2rem;
   z-index: 999;
   width: 300px;
   min-height: 100vh;
+  box-shadow: -1px 6px 10px 2px #5d5aff;
 }
 
 .linksWrapper.openMenu li {
